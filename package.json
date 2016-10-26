@@ -1,0 +1,16 @@
+{
+  "name": "subdomain_example",
+  "version": "1.0.0",
+  "description": "Simple example of static assets served from a different domain that api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "request": "^2.75.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

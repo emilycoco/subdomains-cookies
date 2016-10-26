@@ -1,0 +1,29 @@
+<!-- DOCTYPE HTML -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Page</title>
+</head>
+<body>
+<h1>Vegetables</h1>
+<ul id="list"></ul>
+<input type="text" id="input" placeholder="Cookie value"></input>
+<button onclick="setFruitCookie()">Add cookie shared by both web domains</button>
+<span id="cookies">Domain cookies: </span>
+<script src="/scripts/makeRequest.js"></script>
+<script src="/scripts/displayList.js"></script>
+<script src="/scripts/setCookie.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        makeRequest('http://api.localhost:8000/vegetable', displayList);
+        displayCookie();
+    });
+
+    function setFruitCookie() {
+        var input = document.getElementById('input').value;
+        setCookie('vegetableCookie', input, '.mydomain.com');
+        displayCookie();
+    }
+</script>
+</body>
